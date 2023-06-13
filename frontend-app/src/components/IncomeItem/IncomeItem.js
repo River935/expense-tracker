@@ -35,7 +35,7 @@ function IncomeItem({
             case 'other':
                 return piggy;
             default:
-                return ''
+                return money
         }
     }
 
@@ -58,7 +58,7 @@ function IncomeItem({
             case 'other':
                 return circle;
             default:
-                return ''
+                return freelance
         }
     }
 

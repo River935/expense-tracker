@@ -89,7 +89,6 @@ function Form() {
                     icon={plus}
                     bPad={'.8rem 1.6rem'}
                     bRad={'30px'}
-                    bg={'var(--color-accent'}
                     color={'#fff'}
                 />
             </div>
@@ -129,6 +128,7 @@ const FormStyled = styled.form`
         justify-content: flex-end;
         select{
             color: rgba(34, 34, 96, 0.4);
+            width: 100%;
             &:focus, &:active{
                 color: rgba(34, 34, 96, 1);
             }
