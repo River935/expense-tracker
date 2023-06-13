@@ -1,6 +1,5 @@
-import React, {useState, useMemo} from 'react'
-import styled from "styled-components";
-import bg from './assets/bg.png'
+import React, { useState, useMemo } from 'react';
+import styled from 'styled-components';
 import { MainLayout } from './styles/Layouts';
 import Navigation from './components/Navigation/Navigation';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -36,13 +35,11 @@ function App() {
   },[])
 
   return (
-    <AppStyled bg={bg} className="App">
+    <AppStyled className="App">
       {orbMemo}
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
-        <main>
-          {displayData()}
-        </main>
+        <main>{displayData()}</main>
       </MainLayout>
     </AppStyled>
   );
@@ -50,16 +47,18 @@ function App() {
 
 const AppStyled = styled.div`
   height: 100vh;
-  background-image: url(${props => props.bg});
-  position: relative;
-  main{
+  background: #d1c0f5;
+  backdrop-filter: blur(4.5px);
+  overflow-x: hidden;
+
+  main {
     flex: 1;
     background: rgba(252, 246, 249, 0.78);
-    border: 3px solid #FFFFFF;
+    border: 3px solid #ffffff;
     backdrop-filter: blur(4.5px);
     border-radius: 32px;
     overflow-x: hidden;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       width: 0;
     }
   }
